@@ -1,0 +1,43 @@
+<!-- Simple tabbed page for 3 plots, adapted from
+https://www.w3schools.com/howto/howto_js_tabs.asp -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body onload="openTab(event, '48H')"> <!-- Open 48H tab by default -->
+
+        <!-- Tab buttons -->
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, '48H')">
+              48H
+          </button>
+          <button class="tablinks" onclick="openTab(event, '12H')">
+              12H
+          </button>
+          <button class="tablinks" onclick="openTab(event, '2H')">
+              2H
+          </button>
+        </div>
+
+        <!-- Tab contents -->
+        <div id="48H" class="tabcontent">
+            <img src="48h.png" class="plot"/>
+        </div>
+
+        <div id="12H" class="tabcontent">
+            <img src="12h.png" class="plot" />
+        </div>
+
+        <div id="2H" class="tabcontent">
+            <img src="2h.png" class="plot" />
+        </div>
+
+        <!-- Tab control JavaScript -->
+        <script src="tabs.js"></script>
+
+    </body>
+</html>
